@@ -1,0 +1,346 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+/* Logo */
+.logo {
+    background-image: url(img/letterboard.png);
+    background-size: 100px 50px;
+    width: 150px;
+    height: 75px;
+    background-size: 100%;
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    
+    
+}
+
+/* Navegação */
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: solid;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -6px;
+    left: 0;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+/* Botão de Login */
+.navigation .btnlogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+.navigation .btnlogin-popup:hover {
+    background: #fff;
+    color: black;
+}
+
+/* Corpo da Página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    font-family: arial;
+    background-image: url(img/wallpaper.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Formulário */
+.formulario {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height .2s ease;
+    overflow: hidden;
+
+}
+
+.formulario.Active {
+    height: 520px;
+}
+
+
+.formulario .formboxlogin {
+    transition: 0.18s ease;
+    transform: translateX(0);
+}
+
+.formulario .formboxregistro {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.formulario.Active .formboxregistro {
+    transform: translateX(0);
+}
+
+.formulario.Active .formboxlogin {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+/* Estilos do formulário de login */
+.formulario h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Caixas de Entrada do Formulário */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: gray;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+}
+
+.linkregistro {
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+    transition: 0.5s;
+
+
+}
+
+.linkregistro:hover {
+    opacity: 0.5;
+    text-decoration: underline;
+}
+
+.linkregistro p a {
+    color: gray;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.linkregistro p a:hover {
+    text-decoration: underline;
+}
+
+/* Lembretes e links esquecidos */
+.remember-forgot a {
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de Login */
+.botaologin {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: 0.5s;
+}
+
+.botaologin:hover {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: dotted;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 20px;
+}
+
+/* Seção */
+section {
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+    #lista {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1.title {
+        background-color: none;
+        color: beige;
+        padding: 20px;
+    }
+
+    .obras {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 20px;
+}
+
+
+
+    form input#pesquisa {
+        padding: 5px;
+        border: none;
+        outline: none;
+        flex: 1;
+    }
+
+    button {
+        margin-left: 10px; 
+    }
+
+    div.item {
+        text-align: center;
+        padding: 10px;
+        width: 200px;
+        border: 2px solid red cornflowerblue;
+        border-radius: 5px ;
+        margin: 5px; }
+
+    div.item:hover{
+        background-color: cornflowerblue;
+        cursor: pointer;
+    }
+    div.item img{
+        width: 100%;
+    }
+
+ 
+    .item img {
+        max-width: 100%; 
+        height: auto; 
+        margin-bottom: 10px; 
+        border-radius: 10px; 
+    }
+    div.lista{
+        padding: 5px;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+#form.obras{
+    
+align-items: center;}
